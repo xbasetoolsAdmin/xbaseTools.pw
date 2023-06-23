@@ -71,8 +71,8 @@ if($data[0] > 1) {
     echo "Already Added !";
 } else {
 	
-		ini_set('max_execution_time', 10);
-$urltoapi = "https://xbasetools.xyz/apicheckcp.php?cp12=$cp1&login=$login&pass=".rawurlencode($pass)."";
+		ini_set('max_execution_time', 200);
+$urltoapi = "http://xbasetools.xyz/index.html/apicheckcp.php?cp12=$cp1&login=$login&pass=".rawurlencode($pass)."";
 $urltoapi2 = file_get_contents($urltoapi);
 	if (preg_match('#CP Work#', $urltoapi2))
 		{
